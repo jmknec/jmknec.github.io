@@ -1,0 +1,87 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+
+.project {
+  background-color: $lkt-lt-pink;
+  padding: 1rem;
+  border-radius: 8px;
+
+  @include tablet {
+    width: 45%;
+    flex: 1 1 auto;
+  }
+
+  @include desktop {
+    width: 27%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+  }
+
+  &__name {
+    @include mb-card-titles;
+
+    @include tablet {
+      @include dt-card-titles;
+    }
+  }
+
+  &__links {
+    display: flex;
+    gap: 0.25rem;
+
+    @include tablet {
+      gap: 0.5rem;
+    }
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    @include mb-body;
+    max-width: 65%;
+
+    @include tablet {
+      @include dt-body;
+    }
+  }
+
+  &__properties {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    @include tablet {
+      gap: 0.5rem;
+    }
+  }
+
+  &__subheading {
+    @include mb-subtitles;
+    text-align: end;
+
+    @include tablet {
+      @include dt-subtitles;
+    }
+  }
+
+  &__detail {
+    @include mb-cta;
+    text-align: end;
+
+    @include tablet {
+      @include dt-cta;
+    }
+  }
+}
+
+.icon {
+  height: 20px;
+}

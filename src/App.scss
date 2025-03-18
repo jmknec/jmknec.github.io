@@ -1,0 +1,31 @@
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
+
+//global resets
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#root {
+  @include full-size;
+  min-height: 100vh;
+  font-family: $primary-font;
+  background-color: $lkt-white;
+  color: $lkt-black;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
